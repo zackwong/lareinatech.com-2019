@@ -1,20 +1,25 @@
 ---
 layout: default
 ---
-<section class="pageTitle">
+<main class="main main-inner main-contacts bg-{{ page.category }}" data-stellar-background-ratio="0.6">
   <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="titleTable">
-          <div class="titleTableInner">
-            <div class="pageTitleInfo">
-              <h1>{{ page.title }}</h1>
-              <div class="under-border"></div>
-            </div>
-          </div>
-        </div>
+    <header class="main-header">
+      <h1>{{ page.title }}</h1>
+    </header>
+  </div>
+  <div class="page-lines">
+    <div class="container">
+      <div class="col-line col-xs-4">
+        <div class="line"></div>
+      </div>
+      <div class="col-line col-xs-4">
+        <div class="line"></div>
+      </div>
+      <div class="col-line col-xs-4">
+        <div class="line"></div>
+        <div class="line"></div>
       </div>
     </div>
   </div>
-</section>
+</main>
 {{ content }}

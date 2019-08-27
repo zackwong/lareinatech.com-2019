@@ -1099,7 +1099,7 @@ label.error{
 
 
 .bg-about{
-  background: url(../img/bg/about.jpg) 50% 0 no-repeat;
+  background: url(../images/assets/bg-about.jpg) 50% 0 no-repeat;
   background-size: cover;
 }
 
@@ -1270,9 +1270,9 @@ label.error{
 
 
 
-.bg-projects{
+.bg-products{
   position: relative;
-  background:url(../img/bg/projects.jpg) 50% 0 no-repeat;
+  background:url(../images/assets/bg-products.jpg) 50% 0 no-repeat;
   background-size: cover;
 }
 
@@ -1753,7 +1753,7 @@ img.mfp-img{
 
 
 .bg-blog{
-  background: url(../img/bg/blog.jpg) 50% 0 no-repeat;
+  background: url(../images/assets/bg-blog.jpg) 50% 0 no-repeat;
   background-size: cover;
 }
 
@@ -2010,8 +2010,8 @@ img.mfp-img{
 
 
 
-.bg-contacts{
-  background: url(../img/bg/contacts.jpg) 50% 0 no-repeat;
+.bg-contact{
+  background: url(../images/assets/bg-contact.jpg) 50% 0 no-repeat;
   background-size: cover;
 }
 

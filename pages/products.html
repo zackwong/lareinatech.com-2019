@@ -1,0 +1,24 @@
+---
+layout: default
+permalink: /products/
+category: products
+title: Products
+---
+<section class="projects">
+  <div class="js-projects-gallery">
+    <div class="row">{% for post in site.categories["products"] %}
+      <div class="project project-light col-sm-6 col-md-4 col-lg-3">
+        <a href="/images/products/1-480x880.jpg" title="{{ post.title }}">
+          <figure>
+            <img alt="{{ post.title }}" src="img/projects/1-480x880.jpg">
+            <figcaption>
+              <h3 class="project-title">Residential care<br> project in Paris</h3>
+              <h4 class="project-category">Architecture</h4>
+              <div class="project-zoom"></div>
+            </figcaption>
+          </figure>
+        </a>
+      </div>{% endfor %}
+    </div>
+  </div>
+</section>
