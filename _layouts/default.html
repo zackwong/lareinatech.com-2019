@@ -17,99 +17,70 @@
     <link href="/css/style.css" rel="stylesheet" media="screen">
   </head>
   <body>
-    <header id="top" class="header-home">
+    <header id="top" class="{% if page.category == 'home' %}header-home{% else %}header-inner{% endif %}">
       <div class="brand-panel">
-        <a href="{{ site.url }}" class="brand js-target-scroll">
+        <a href="{{ site.url }}" class="brand {% if page.category == 'home' %}js-target-scroll{% endif %}">
           <span class="text-primary">L</span>areina
         </a>
-        <div class="brand-name">Lareina</div>
+        <div class="brand-name">Lareina</div>{% if page.category == 'home' %}
         <div class="slide-number">
           <span class="current-number text-primary">0<span class="count">1</span></span>
           <sup><span class="delimiter">/</span> 0<span class="total-count"></span></sup>
-        </div>
+        </div>{% endif %}
       </div>
-      <div class="header-phone">+7 (212) 674-25-10</div>
-      <div class="vertical-panel"></div>
+      <div class="header-phone">{{ site.email }}</div>{% if page.category == 'home' %}
+      <div class="vertical-panel"></div>{% endif %}
       <div class="vertical-panel-content">
-        <div class="vertical-panel-info">
-            <div class="vertical-panel-title">Architecture buro</div>
-            <div class="line"></div>
-         </div>
+        <div class="vertical-panel-info">{% if page.category == 'home' %}
+          <div class="vertical-panel-title">Lareina</div>{% endif %}
+          <div class="line"></div>
+        </div>
         <ul class="social-list">
-          <li><a href="" class="fa fa-instagram"></a></li>
-          <li><a href="" class="fa fa-twitter"></a></li>
-          <li><a href="" class="fa fa-behance"></a></li>
-          <li><a href="" class="fa fa-facebook"></a></li>
-         </ul>  
-      </div> 
-
-      <!-- Navigation Desctop -->
-
+          <li><a href="{{ site.facebook }}" class="fa fa-facebook"></a></li>
+          <li><a href="{{ site.twitter }}" class="fa fa-twitter"></a></li>
+          <li><a href="{{ site.linkedin }}" class="fa fa-linkedin"></a></li>
+          <li><a href="{{ site.youtube }}" class="fa fa-youtube-play"></a></li>
+        </ul>  
+      </div>
       <nav class="navbar-desctop visible-md visible-lg">
         <div class="container">
           <a href="{{ site.url }}" class="brand js-target-scroll">
             <span class="text-primary">L</span>areina
           </a>
           <ul class="navbar-desctop-menu">
-            
-            <li class="active">
-              <a href="about.html">About us</a>
-            </li>
-            <li>
-              <a href="projects.html">Projects</a>
-              <ul>
-                <li><a href="projects.html">Projects - List</a></li>
-                <li>
-                  <a href="project.html">Project - details</a>
-                </li>
+            <li class="{% if page.category == 'products' %}active{% endif %}">
+              <a href="{{ site.url }}/products/">Products</a>
+              <ul>{% for post in site.categories["products"] %}
+                <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
               </ul>
             </li>  
-            <li>
-              <a href="blog.html">Blog</a>
-              <ul>
-                <li><a href="blog.html">Blog - List</a></li>
-                <li>
-                  <a href="blog-details.html">Blog - Post</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="contacts.html">Contacts</a>
-            </li>
+            <li class="{% if page.category == 'blog' %}active{% endif %}"><a href="{{ site.url }}/blog/">Blog</a></li>
+            <li class="{% if page.category == 'products' %}about{% endif %}"><a href="{{ site.url }}/about/">About Lareina</a></li>
+            <li class="{% if page.category == 'contact' %}active{% endif %}"><a href="{{ site.url }}/contact/">Contact Us</a></li>
           </ul>
         </div>
       </nav>
-
-      <!-- Navigation Mobile -->
-
       <nav class="navbar-mobile">
         <a href="{{ site.url }}" class="brand js-target-scroll">
           <span class="text-primary">L</span>areina
         </a>
-
-        <!-- Navbar Collapse -->
-
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbar-mobile"> 
           <ul class="navbar-nav-mobile">
-            <li class="active">
-              <a href="about.html">About Lareina</a>
-            </li>
-            <li>
-              <a href="#">Products <i class="fa fa-angle-down"></i></a>
-              <ul>
-                <li><a href="projects.html">Projects - List</a></li>
-                <li><a href="project.html">Project - details</a></li>
+            <li class="{% if page.category == 'products' %}active{% endif %}">
+              <a href="{{ site.url }}/products/">Products</a>
+              <ul>{% for post in site.categories["products"] %}
+                <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
               </ul>
             </li>  
-            <li><a href="{{ site.url }}/blog/">Blog</a></li>
-            <li><a href="{{ site.url }}/contact/">Contact Us</a></li>
+            <li class="{% if page.category == 'blog' %}active{% endif %}"><a href="{{ site.url }}/blog/">Blog</a></li>
+            <li class="{% if page.category == 'products' %}about{% endif %}"><a href="{{ site.url }}/about/">About Lareina</a></li>
+            <li class="{% if page.category == 'contact' %}active{% endif %}"><a href="{{ site.url }}/contact/">Contact Us</a></li>
           </ul>
         </div>
       </nav> 
@@ -121,10 +92,7 @@
         <div class="rev_slider_wrapper">
           <div id="rev_slider" class="rev_slider fullscreenbanner">
             <ul>
-
-            
-
-            <li  data-transition="slotzoom-horizontal" data-slotamount="7" data-masterspeed="1000" data-fsmasterspeed="1000">
+              <li  data-transition="slotzoom-horizontal" data-slotamount="7" data-masterspeed="1000" data-fsmasterspeed="1000">
 
               <!-- Main image-->
 
@@ -335,32 +303,61 @@
           </ul>
         </div>
       </div>
-    </main>{% endif %}
-      {{ content }}
+      </main>{% endif %}
+      <div class="content">
+        {{ content }}
+        <footer id="footer" class="footer">
+          <div class="container">
+            <div class="row-base row">
+              <div class="col-base text-left-md col-md-4">
+                <a href="{{ site.url }}" class="brand">
+                  <span class="text-primary">L</span>areina
+                </a>
+              </div>
+              <div class="text-center-md col-base col-md-4">Copyright © 2011-2019 Guangdong Flexwarm Advanced Materials & Technology Co., Ltd | <a href="{{ site.url }}/sitemap.xml" class="author-link" target="_blank">Sitemap</a></div>
+              <div class="text-right-md col-base col-md-4">Website design by <a href="https://gdky.net" class="author-link" target="_blank">OSW</a></div>
+            </div>
+          </div>
+        </footer>    
+        <div class="page-lines">
+          <div class="container">
+            <div class="col-line col-xs-4">
+              <div class="line"></div>
+            </div>
+            <div class="col-line col-xs-4">
+              <div class="line"></div>
+            </div>
+            <div class="col-line col-xs-4">
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/smoothscroll.js"></script>
-<script src="/js/jquery.validate.min.js"></script>
-<script src="/js/wow.min.js"></script>
-<script src="/js/jquery.stellar.min.js"></script>
-<script src="/js/jquery.magnific-popup.js"></script>
-<script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/smoothscroll.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/jquery.stellar.min.js"></script>
+    <script src="/js/jquery.magnific-popup.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
 
 <!-- SLIDER REVOLUTION -->
-<script src="/js/rev-slider/jquery.themepunch.tools.min.js"></script>
-<script src="/js/rev-slider/jquery.themepunch.revolution.min.js"></script>
+    <script src="/js/rev-slider/jquery.themepunch.tools.min.js"></script>
+    <script src="/js/rev-slider/jquery.themepunch.revolution.min.js"></script>
 
 <!-- SLIDER REVOLUTION 5.0 EXTENSIONS   -->
-<script src="/js/rev-slider/revolution.extension.actions.min.js"></script>
-<script src="/js/rev-slider/revolution.extension.carousel.min.js"></script>
-<script src="/js/rev-slider/revolution.extension.kenburn.min.js"></script>
-<script src="/js/rev-slider/revolution.extension.layeranimation.min.js"></script>
-<script src="/js/rev-slider/revolution.extension.migration.min.js"></script>
-<script src="/js/rev-slider/revolution.extension.navigation.min.js"></script>
-<script src="/js/rev-slider/revolution.extension.parallax.min.js"></script>
-<script src="/js/rev-slider/revolution.extension.slideanims.min.js"></script>
-<script src="/js/rev-slider/revolution.extension.video.min.js"></script>
-<script src="/js/interface.js"></script> 
+    <script src="/js/rev-slider/revolution.extension.actions.min.js"></script>
+    <script src="/js/rev-slider/revolution.extension.carousel.min.js"></script>
+    <script src="/js/rev-slider/revolution.extension.kenburn.min.js"></script>
+    <script src="/js/rev-slider/revolution.extension.layeranimation.min.js"></script>
+    <script src="/js/rev-slider/revolution.extension.migration.min.js"></script>
+    <script src="/js/rev-slider/revolution.extension.navigation.min.js"></script>
+    <script src="/js/rev-slider/revolution.extension.parallax.min.js"></script>
+    <script src="/js/rev-slider/revolution.extension.slideanims.min.js"></script>
+    <script src="/js/rev-slider/revolution.extension.video.min.js"></script>
+    <script src="/js/interface.js"></script> 
   </body>
 </html>
