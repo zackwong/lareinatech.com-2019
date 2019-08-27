@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.full_title %}{{ page.full_title }}{% else %}{% if page.title %}{{ page.title }}-{% endif %}{{ site.title }}{% endif %}</title>
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta name="applicable-device" content="pc,mobile">
+    <link rel="apple-touch-icon" href="{{ site.url }}/images/assets/lareina-icon.jpg">
+    <meta name="apple-mobile-web-app-title" content="Lareina">
+    <link type="text/css" rel="stylesheet" href="/assets/application.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <header id="top" class="header-home">
+      <div class="brand-panel">
+        <a href="#top" class="brand js-target-scroll">
+          <span class="text-primary">L</span>areina
+        </a>
+        <div class="brand-name">Lareina</div>
+        <div class="slide-number">
+          <span class="current-number text-primary">0<span class="count">1</span></span>
+          <sup><span class="delimiter">/</span> 0<span class="total-count"></span></sup>
+        </div>
+      </div>
+      <div class="header-phone">+7 (212) 674-25-10</div>
+      <div class="vertical-panel"></div>
+      <div class="vertical-panel-content">
+        <div class="vertical-panel-info">
+            <div class="vertical-panel-title">Architecture buro</div>
+            <div class="line"></div>
+         </div>
+        <ul class="social-list">
+          <li><a href="" class="fa fa-instagram"></a></li>
+          <li><a href="" class="fa fa-twitter"></a></li>
+          <li><a href="" class="fa fa-behance"></a></li>
+          <li><a href="" class="fa fa-facebook"></a></li>
+         </ul>  
+      </div> 
+
+      <!-- Navigation Desctop -->
+
+      <nav class="navbar-desctop visible-md visible-lg">
+        <div class="container">
+          <a href="#top" class="brand js-target-scroll">
+            go<span class="text-primary">.</span>arch
+          </a>
+          <ul class="navbar-desctop-menu">
+            <li class="active">
+              <a href="index.html">Home</a>
+              <ul>
+                <li><a href="../light/index.html">Home - Light</a></li>
+                <li class="active">
+                  <a href="index.html">Home - Dark</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="about.html">About us</a>
+            </li>
+            <li>
+              <a href="projects.html">Projects</a>
+              <ul>
+                <li><a href="projects.html">Projects - List</a></li>
+                <li>
+                  <a href="project.html">Project - details</a>
+                </li>
+              </ul>
+            </li>  
+            <li>
+              <a href="blog.html">Blog</a>
+              <ul>
+                <li><a href="blog.html">Blog - List</a></li>
+                <li>
+                  <a href="blog-details.html">Blog - Post</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="contacts.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Navigation Mobile -->
+
+      <nav class="navbar-mobile">
+        <a href="#top" class="brand js-target-scroll">
+          go<span class="text-primary">.</span>arch
+        </a>
+
+        <!-- Navbar Collapse -->
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-mobile"> 
+          <ul class="navbar-nav-mobile">
+            <li class="active">
+              <a href="#">Home <i class="fa fa-angle-down"></i></a>
+              <ul>
+                <li><a href="../light/index.html">Home - Light</a></li>
+                <li class="active">
+                  <a href="index.html">— Home - Dark</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="about.html">About us</a>
+            </li>
+            <li>
+              <a href="#">Projects <i class="fa fa-angle-down"></i></a>
+              <ul>
+                <li><a href="projects.html">Projects - List</a></li>
+                <li>
+                  <a href="project.html">Project - details</a>
+                </li>
+              </ul>
+            </li>  
+            <li>
+              <a href="#">Blog <i class="fa fa-angle-down"></i></a>
+              <ul>
+                <li><a href="blog.html">Blog - List</a></li>
+                <li>
+                  <a href="blog-details.html">Blog - Post</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="contacts.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </nav> 
+    </header>
+    <div class="layout">
+      {{ content }}
+    </div>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/smoothscroll.js"></script>
+<script src="/js/jquery.validate.min.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/jquery.stellar.min.js"></script>
+<script src="/js/jquery.magnific-popup.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+
+<!-- SLIDER REVOLUTION -->
+<script src="/js/rev-slider/jquery.themepunch.tools.min.js"></script>
+<script src="/js/rev-slider/jquery.themepunch.revolution.min.js"></script>
+
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS   -->
+<script src="/js/rev-slider/revolution.extension.actions.min.js"></script>
+<script src="/js/rev-slider/revolution.extension.carousel.min.js"></script>
+<script src="/js/rev-slider/revolution.extension.kenburn.min.js"></script>
+<script src="/js/rev-slider/revolution.extension.layeranimation.min.js"></script>
+<script src="/js/rev-slider/revolution.extension.migration.min.js"></script>
+<script src="/js/rev-slider/revolution.extension.navigation.min.js"></script>
+<script src="/js/rev-slider/revolution.extension.parallax.min.js"></script>
+<script src="/js/rev-slider/revolution.extension.slideanims.min.js"></script>
+<script src="/js/rev-slider/revolution.extension.video.min.js"></script>
+<script src="/js/interface.js"></script> 
+  </body>
+</html>

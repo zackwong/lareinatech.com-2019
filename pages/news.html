@@ -1,0 +1,28 @@
+---
+layout: pages
+permalink: /news/
+category: news
+title: News
+---
+<section class="mainContentSection packagesSection">
+  <div class="container">
+    <div class="row">{% for post in site.categories["news"] %}
+      <div class="col-sm-4 col-xs-12">
+        <div class="thumbnail blogPostItem">
+          <a href="{{ site.url }}{{ post.url }}">
+            <img src="/images/news/{{ post.image }}.jpg" alt="{{ post.title }}">
+          </a>
+          <div class="caption">
+            <h3><a href="{{ site.url }}{{ post.url }}" class="blogTitle">{{ post.title }}</a></h3>
+            <ul class="list-inline blogInfo">
+              <li><i class="fa fa-calendar"></i>{{ post.date | date:"%d %b %Y" }}</li>
+              <li><i class="fa fa-tags"></i>{{ post.keywords }}</li>
+            </ul>
+            <p>{{ post.description }}</p>
+            <a href="{{ site.url }}{{ post.url }}" class="btn buttonTransparent">Read More</a>
+          </div>
+        </div>
+      </div>{% endfor %}
+    </div>
+  </div>
+</section>
