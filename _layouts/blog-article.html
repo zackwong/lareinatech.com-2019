@@ -6,60 +6,15 @@ layout: pages
     <div class="row">
       <div class="col-primary col-md-12">
         <article class="post">
-                <header class="post-header">
-                  <h3>Advice for stirring your online community and fostering engagement</h3>
-                  <div class="blog-meta">
-                    <div class="author">
-                      by <a href="#">Craig David</a>
-                    </div>
-                    <div class="time">July, 26</div>
-                  </div>
-                </header>
-                <div class="post-thumbnail">
-                  <img alt="" class="img-responsive" src="img/blog/1-760x514.jpg">
-                </div>
-                <p>When you enter into any new area of science, you almost always find yourself with a baffling new language of technical terms to learn before you can converse with the experts. This is certainly true in astronomy both in terms of terms that refer to the cosmos and terms that describe the tools of the trade, the most prevalent being the telescope. So to get us off of first base, let’s define some of the key terms that pertain to telescopes to help you be able to talk to them more intelligently.</p> 
-
-                <p>The first area of specialization in telescopes has to do with the types of telescopes people use. The three designs of telescopes that most people use are the Refractor, the Reflector and the Schmidt Cassegrain telescope. 
-                The refractor telescope uses a convex lens to focus the light on the eyepiece. 
-                The reflector telescope has a concave lens which means it bends in. It uses mirrors to focus the image that you eventually see. 
-                The Schmidt Cassegrain telescope uses an involved system of mirrors to capture the image you want to see.
-                A binocular telescope uses a set of telescopes mounted and synchronized so your view of the sky is 3-D.</p>
-
-                <p>Beyond the basic types, other terms refer to parts of the telescope or to the science behind how telescopes work.
-                Collimation is a term for how well tuned the telescope is to give you a good clear image of what you are looking at. You want your telescope to have good collimation so you are not getting a false image of the celestial body.</p>
-
-                <p>Aperture is a fancy word for how big the lens of your telescope is. But it’s an important word because the aperture of the lens is the key to how powerful your telescope is. Magnification has nothing to do with it, its all in the aperture.</p>
-                <div class="blog-tags">
-                  <a href="">marketing</a>
-                  <a href="">technology</a>
-                  <a href="">design</a>
-                  <a href="">technology</a>
-                  <a href="">design</a>
-                </div>
-              </article>
+          <header class="post-header">
+            <h3>{{ page.title }}</h3>
+            <div class="blog-meta">
+              <div class="author">{{ page.keywords }}</div>
+              <div class="time">{{ post.date | date:"%d %b %Y" }}</div>
             </div>
-            
-          </div>
-        </div>
-      </section>
-
-
-<section class="mainContentSection blogSidebar">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="thumbnail blogSinglePost">
-          <div class="caption text-center">
-            <h2>{{ page.title }}</h2>
-            <ul class="list-inline blogInfo">
-              <li><i class="fa fa-calendar"></i>{{ page.date | date:"%d %b %Y" }}</li>
-              <li><i class="fa fa-tags"></i>{{ page.keywords }}</li>
-            </ul>
-            {{ content }}
-            <a href="{{ site.url }}/news/" class="btn buttonTransparent">More News</a>
-          </div>
-        </div>
+          </header>
+          {{ content }}
+        </article>
       </div>
     </div>
   </div>
