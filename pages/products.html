@@ -8,12 +8,12 @@ title: Products
   <div class="js-projects-gallery">
     <div class="row">{% for post in site.categories["products"] %}
       <div class="project project-light col-sm-6 col-md-4 col-lg-3">
-        <a href="/images/products/1-480x880.jpg" title="{{ post.title }}">
+        <a href="/images/products/{{ post.image }}.jpg" title="{{ post.title }}">
           <figure>
-            <img alt="{{ post.title }}" src="img/projects/1-480x880.jpg">
+            <img alt="{{ post.title }}" src="/images/products/{{ post.image }}.jpg">
             <figcaption>
-              <h3 class="project-title">Residential care<br> project in Paris</h3>
-              <h4 class="project-category">Architecture</h4>
+              <h3 class="project-title">{{ post.title }}<br> Products Modle</h3>
+              <h4 class="project-category">Lareina</h4>
               <div class="project-zoom"></div>
             </figcaption>
           </figure>
