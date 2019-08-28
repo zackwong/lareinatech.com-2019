@@ -47,134 +47,18 @@ full_title: Lareina
         </div>
         <div class="section-content">
           <div class="projects-carousel js-projects-carousel js-projects-gallery">
-            <div class="project project-light">
-              <a href="img/projects/1-480x880.jpg" title="project 1">
-                <figure>
-                  <img alt="" src="img/projects/1-480x880.jpg">
-                  <figcaption>
-                    <h3 class="project-title">
-                      Residential care<br> project in Paris
-                    </h3>
-                    <h4 class="project-category">
-                      Architecture
-                    </h4>
-                    <div class="project-zoom"></div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="project project-light">
-              <a href="img/projects/2-480x880.jpg" title="project 2">
-                <figure>
-                  <img alt="" src="img/projects/2-480x880.jpg">
-                  <figcaption>
-                    <h3 class="project-title">
-                      Concert hall<br> in New york
-                    </h3>
-                    <h4 class="project-category">
-                      Architecture
-                    </h4>
-                    <div class="project-zoom"></div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="project">
-              <a href="img/projects/3-480x880.jpg" title="project 3">
-                <figure>
-                  <img alt="" src="img/projects/3-480x880.jpg">
-                  <figcaption>
-                    <h3 class="project-title">
-                      Modern hotel<br>in London
-                    </h3>
-                    <h4 class="project-category">
-                      Architecture
-                    </h4>
-                    <div class="project-zoom"></div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="project">
-              <a href="img/projects/4-480x880.jpg" title="project 4">
-                <figure>
-                  <img alt="" src="img/projects/4-480x880.jpg">
-                  <figcaption>
-                    <h3 class="project-title">
-                      Modern hotel<br>in London
-                    </h3>
-                    <h4 class="project-category">
-                      Architecture
-                    </h4>
-                    <div class="project-zoom"></div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="project">
-              <a href="img/projects/5-480x880.jpg" title="project 5">
-                <figure>
-                  <img alt="" src="img/projects/5-480x880.jpg">
-                  <figcaption>
-                    <h3 class="project-title">
-                      Residential care<br> project in Paris
-                    </h3>
-                    <h4 class="project-category">
-                      Architecture
-                    </h4>
-                    <div class="project-zoom"></div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="project">
-              <a href="img/projects/6-480x880.jpg" title="project 6">
-                <figure>
-                  <img alt="" src="img/projects/6-480x880.jpg">
-                  <figcaption>
-                    <h3 class="project-title">
-                      Residential care<br> project in Paris
-                    </h3>
-                    <h4 class="project-category">
-                      Architecture
-                    </h4>
-                    <div class="project-zoom"></div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="project">
-              <a href="img/projects/7-480x880.jpg" title="project 7">
-                <figure>
-                  <img alt="" src="img/projects/7-480x880.jpg">
-                  <figcaption>
-                    <h3 class="project-title">
-                      Residential care<br> project in Paris
-                    </h3>
-                    <h4 class="project-category">
-                      Architecture
-                    </h4>
-                    <div class="project-zoom"></div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="project">
-              <a href="img/projects/8-480x880.jpg" title="project 8">
-                <figure>
-                  <img alt="" src="img/projects/8-480x880.jpg">
-                  <figcaption>
-                    <h3 class="project-title">
-                      Residential care<br> project in Paris
-                    </h3>
-                    <h4 class="project-category">
-                      Architecture
-                    </h4>
-                    <div class="project-zoom"></div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
+            {% for post in site.categories["products"] %}
+    <div class="project col-sm-6 col-md-4 col-lg-3">
+      <a href="{{ site.url }}{{ post.url }}">
+        <figure>
+          <img alt="{{ post.title }}" src="/images/products/{{ post.image }}.jpg">
+          <figcaption>
+            <h3 class="project-title">{{ post.title }}<br> Products Modle</h3>
+            <h4 class="project-category">Lareina</h4>
+          </figcaption>
+        </figure>
+      </a>
+    </div>{% endfor %}
           </div>
         </div>
       </section>
