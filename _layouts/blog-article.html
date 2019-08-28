@@ -7,14 +7,15 @@ layout: default
       <div class="col-primary col-md-12">
         <article class="post">
           <header class="post-header">
-            <h3>{{ page.title }}</h3>
-            <div class="blog-meta">
-              <div class="author">{{ page.keywords }}</div>
-              <div class="time">{{ post.date | date:"%d %b %Y" }}</div>
+            <div class="blog-meta text-right">
+              <div class="time">{{ page.date | date:"%d %b %Y" }}</div>
             </div>
           </header>
           {{ content }}
         </article>
+        <div class="section-content text-center">
+          <a href="{{ site.url }}/blog/" class="btn btn-gray">Read more</a>
+        </div>
       </div>
     </div>
   </div>
