@@ -9,13 +9,13 @@ title: Products
     <div class="row">{% for post in site.categories["products"] %}
       <div class="project project-light col-sm-6 col-md-4 col-lg-3">
         <a href="{{ post.url }}{{ post.url }}">
-          <figure>
+          
             <img alt="{{ post.title }}" src="/images/products/{{ post.image }}.jpg">
             <figcaption>
               <h3 class="project-title">{{ post.title }}<br> Products Modle</h3>
               <h4 class="project-category">Lareina</h4>
             </figcaption>
-          </figure>
+          
         </a>
       </div>{% endfor %}
     </div>
