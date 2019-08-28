@@ -6,12 +6,11 @@ layout: default
     <div class="row">
       <div class="col-primary col-md-12">
         <article class="post">
-          <header class="post-header">
-            <div class="blog-meta text-right">
-              <div class="time">{{ page.date | date:"%d %b %Y" }}</div>
-            </div>
-          </header>
           {{ content }}
+          <div class="blog-tags">
+            <a>{{ page.date | date:"%d %b %Y" }}</a>
+            <a>{{ page.keywords }}</a>
+          </div>
         </article>
         <div class="section-content text-center">
           <a href="{{ site.url }}/blog/" class="btn btn-gray">Read more</a>
