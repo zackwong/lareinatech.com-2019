@@ -718,7 +718,7 @@ label.error{
   left: 100%;
   top:60%;
   visibility: hidden;
-  min-width: 234px;
+  min-width: 200px;
   opacity: 0;
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
   background:rgba(50, 50, 50, 0.95);
