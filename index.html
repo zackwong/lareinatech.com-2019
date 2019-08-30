@@ -41,24 +41,32 @@ full_title: Lareina
         </div>
       </section>
 
-      <section class="projects section">
-        <div class="container">
-          <h2 class="section-title"><span class="text-primary">Products</span></h2>
-        </div>
-        <div class="section-content">
-          <div class="projects-carousel js-projects-carousel js-projects-gallery">
-            {% for post in site.categories["products"] %}
-    <div class="project">
-      <a href="{{ site.url }}{{ post.url }}">
+<section class="projects section">
+  <div class="container">
+    <h2 class="section-title"><span class="text-primary">Products</span></h2>
+  </div>
+  <div class="row">
+    <div class="project col-sm-12 col-md-6 col-lg-6">
+      <a href="{{ site.url }}/male/">
         <figure>
-          <img alt="{{ post.title }}" src="/images/products/{{ post.image }}.jpg">
+          <img alt="Smart Clothes Male" src="/images/products/smart-heating-jacket.jpg">
           <figcaption>
-            <h3 class="project-title">{{ post.title }}<br> Products Modle</h3>
+            <h3 class="project-title">Male<br> Smart Clothes</h3>
             <h4 class="project-category">Lareina</h4>
           </figcaption>
         </figure>
       </a>
-    </div>{% endfor %}
-          </div>
-        </div>
-      </section>
+    </div>
+    <div class="project col-sm-12 col-md-6 col-lg-6">
+      <a href="{{ site.url }}/female/">
+        <figure>
+          <img alt="Smart Clothes Female" src="/images/products/smart-heating-jacket.jpg">
+          <figcaption>
+            <h3 class="project-title">Female<br> Smart Clothes</h3>
+            <h4 class="project-category">Lareina</h4>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+</section>
