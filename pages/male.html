@@ -5,18 +5,4 @@ category: smart-clothes
 type-en: male
 title: Male
 ---
-<section class="projects">
-  <div class="row">{% for post in site.categories["products"] %}{% if post.type-en == page.type-en %}
-    <div class="project col-sm-6 col-md-4 col-lg-3">
-      <a href="{{ site.url }}{{ post.url }}">
-        <figure>
-          <img alt="{{ post.title }}" src="/images/products/{{ post.image }}.jpg">
-          <figcaption>
-            <h3 class="project-title">{{ post.title }}<br> Products Modle</h3>
-            <h4 class="project-category">Lareina</h4>
-          </figcaption>
-        </figure>
-      </a>
-    </div>{% endif %}{% endfor %}
-  </div>
-</section>
+{% include products-list.html %}
