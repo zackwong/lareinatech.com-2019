@@ -1,19 +1,16 @@
 ---
 layout: default
 ---
-<section class="blog-details">
+<section class="project-details">
   <div class="container">
-    <div class="row">
-      <div class="col-primary col-md-12">
-        <article class="post">
-          {{ content }}
-          <div class="blog-tags">
-            <a>{{ page.date | date:"%d %b %Y" }}</a>
-            <a>{{ page.keywords }}</a>
-          </div>
-        </article>
-        <div class="section-content text-center">
-          <a href="{{ site.url }}/blog/" class="btn btn-gray">Read more</a>
+    <div class="project-details-item">
+      <div class="row">
+        <div class="project-details-info wow fadeInLeft">
+          <h3 class="project-details-title">{{ page.title }}</h3>
+          <p class="project-details-descr">{{ page.image }}</p>
+        </div>
+        <div class="project-details-img col-md-8 col-md-offset-4">
+          <img alt="" class="img-responsive" src="/images/products/{{ page.image }}-1.jpg">
         </div>
       </div>
     </div>
