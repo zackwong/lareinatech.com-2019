@@ -20,12 +20,19 @@ Lareina英文官网2019年版
       root /srv/lareinatech.com-2019/_site;
       error_page 404 /Error.html;
       add_header Strict-Transport-Security "max-age=15768000" always;
-      ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+      ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3;
       ssl_ciphers HIGH:!aNULL:!MD5:!DH;
     }
     server {
+        listen 443 ssl http2;
+        server_name www.lareinatech.com;
+        ssl_certificate lareinatech.crt;
+        ssl_certificate_key lareinatech.key;
+        return 301 https://lareinatech.com$request_uri;
+    }
+    server {
         listen 80;
-        server_name lareinatech.com;
+        server_name lareinatech.com www.lareinatech.com;
         return 301 https://lareinatech.com$request_uri;
     }
 
