@@ -34,12 +34,6 @@
           <div class="vertical-panel-title">Lareina</div>{% endif %}
           <div class="line"></div>
         </div>
-        <ul class="social-list">
-          <li><a href="{{ site.facebook }}" target="_blank" class="fa fa-facebook"></a></li>
-          <li><a href="{{ site.twitter }}" target="_blank" class="fa fa-twitter"></a></li>
-          <li><a href="{{ site.linkedin }}" target="_blank" class="fa fa-linkedin"></a></li>
-          <li><a href="{{ site.youtube }}" target="_blank" class="fa fa-youtube-play"></a></li>
-        </ul>  
       </div>
       <nav class="navbar-desctop visible-md visible-lg">
         <div class="container">
@@ -49,9 +43,8 @@
           <ul class="navbar-desctop-menu">
             <li class="{% if page.category == 'smart-clothes' %}active{% endif %}">
               <a>Smart Clothes</a>
-              <ul>
-                <li><a href="{{ site.url }}/male/">Male</a></li>
-                <li><a href="{{ site.url }}/female/">Female</a></li>
+              <ul>{% for post in site.categories["products"] %}
+                <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
               </ul>
             </li>
             <li class="{% if page.category == 'about' %}about{% endif %}"><a href="{{ site.url }}/about/">About Lareina</a></li>

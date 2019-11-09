@@ -10,14 +10,6 @@ address: No.7, Xi’an Road, Shawan Town, Panyu District, Guangzhou, China, 5100
 
 email: support@lareinatech.com
 
-facebook: https://www.facebook.com/
-
-twitter: https://twitter.com/
-
-linkedin: https://www.linkedin.com/
-
-youtube: https://www.youtube.com/
-
 exclude:
   - README.md
   - style.css
