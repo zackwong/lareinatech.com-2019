@@ -14,7 +14,7 @@ Lareina英文官网2019年版
     server {
       listen 443 ssl http2;
       server_name lareinatech.com;
-      ssl_certificate lareinatech.pem;
+      ssl_certificate lareinatech.crt;
       ssl_certificate_key lareinatech.key;
       index index.html;
       root /srv/lareinatech.com-2019/_site;
@@ -26,7 +26,7 @@ Lareina英文官网2019年版
     server {
         listen 443 ssl http2;
         server_name www.lareinatech.com;
-        ssl_certificate lareinatech.pem;
+        ssl_certificate lareinatech.crt;
         ssl_certificate_key lareinatech.key;
         return 301 https://lareinatech.com$request_uri;
     }
