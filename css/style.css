@@ -2008,7 +2008,10 @@ img.mfp-img{
 /*  9. Contacts
 /* ------------------------------------------------------------------------------- */
 
-
+.bg-registration{
+  background: url(../images/assets/bg-registration.jpg) 50% 0 no-repeat;
+  background-size: cover;
+}
 
 .bg-contact{
   background: url(../images/assets/bg-contact.jpg) 50% 0 no-repeat;
